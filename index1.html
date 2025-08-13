@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minimal Unique Webpage</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    overflow: hidden;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    animation: fadeIn 1.2s ease;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+  }
+  button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  button:hover {
+    transform: scale(1.05);
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h1 id="title">Welcome 🌟</h1>
+  <p>Your unique minimal webpage is here.</p>
+  <button onclick="changeText()">Surprise Me</button>
+</div>
+
+<script>
+  const titles = ["Hello World 🌍", "Stay Awesome 😎", "Dream Big ✨", "You Got This 💪"];
+  function changeText() {
+    document.getElementById('title').innerText = 
+      titles[Math.floor(Math.random() * titles.length)];
+  }
+</script>
+
+</body>
+</html>
